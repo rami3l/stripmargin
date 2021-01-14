@@ -16,9 +16,9 @@ impl<S: AsRef<str>> StripMargin for S {
         self.as_ref()
             .split_inclusive('\n')
             .map(|line| {
-                let mut peekable = line.chars().skip_while(|ch| ch.is_whitespace()).peekable();
-                match peekable.peek() {
-                    Some(&c) if c == margin_char => peekable.skip(1).collect(),
+                let mut chars = line.chars().skip_while(|ch| ch.is_whitespace());
+                match chars.next() {
+                    Some(c) if c == margin_char => chars.collect(),
                     _ => line.to_owned(),
                 }
             })
