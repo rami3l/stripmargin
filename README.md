@@ -1,6 +1,6 @@
 # stripmargin
 
-A little library that enables you to write multiline strings *à la* Scala.
+A little Rust library that enables you to write multiline strings *à la* Scala.
 
 ## Usage
 
