@@ -60,7 +60,7 @@ pub trait StripMargin {
 impl<S: AsRef<str>> StripMargin for S {
     fn strip_margin_with(&self, margin_char: char) -> String {
         self.as_ref()
-            .split_inclusive('\n')
+            .split('\n')
             .map(|line| {
                 let mut chars = line.chars().skip_while(|ch| ch.is_whitespace());
                 match chars.next() {
@@ -68,6 +68,7 @@ impl<S: AsRef<str>> StripMargin for S {
                     _ => line.to_owned(),
                 }
             })
-            .collect()
+            .collect::<Vec<_>>()
+            .join("\n")
     }
 }
