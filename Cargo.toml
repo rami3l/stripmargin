@@ -1,8 +1,17 @@
 [package]
-name = "stripmargin"
-version = "0.1.0"
 authors = ["rami3l <rami3l@outlook.com>"]
 edition = "2018"
+name = "stripmargin"
+version = "0.1.0"
+
+description = "Simple but elegant multiline string in Rust à la Scala."
+homepage = "https://github.com/rami3l/stripmargin"
+keywords = ["multiline", "string", "literal", "heredoc"]
+repository = "https://github.com/rami3l/stripmargin"
+
+license-file = "LICENSE"
+readme = "README.md"
+# build = "build.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
