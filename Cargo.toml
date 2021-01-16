@@ -9,7 +9,7 @@ homepage = "https://github.com/rami3l/stripmargin"
 keywords = ["multiline", "string", "literal", "heredoc"]
 repository = "https://github.com/rami3l/stripmargin"
 
-license-file = "LICENSE"
+license = "MIT"
 readme = "README.md"
 # build = "build.rs"
 
