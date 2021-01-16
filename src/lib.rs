@@ -9,12 +9,11 @@ pub trait StripMargin {
     /// ```rust
     /// use stripmargin::StripMargin;
     /// assert_eq!(
-    ///     r#"
-    ///     *Hello,
-    ///     *  world!
-    ///     *"#
-    ///     .strip_margin_with('*'),
-    ///     "\nHello,\n  world!\n",
+    ///     r#"Hello,
+    ///       @  world!
+    ///       @"#
+    ///     .strip_margin_with('@'),
+    ///     "Hello,\n  world!\n",
     /// );
     /// ```
     ///
@@ -35,12 +34,11 @@ pub trait StripMargin {
     /// ```rust
     /// use stripmargin::StripMargin;
     /// assert_eq!(
-    ///     r#"
-    ///     |Hello,
-    ///     |  world!
-    ///     |"#
+    ///     r#"Hello,
+    ///       |  world!
+    ///       |"#
     ///     .strip_margin(),
-    ///     "\nHello,\n  world!\n",
+    ///     "Hello,\n  world!\n",
     /// );
     /// ```
     ///

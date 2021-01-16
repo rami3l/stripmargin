@@ -7,23 +7,13 @@ A little Rust library that enables you to write multiline strings *à la* Scala.
 ```rust
 use stripmargin::StripMargin;
 
-// Use '|' to set left margin, and call `strip_margin`, it's that simple!
+// Use '|' to set left margin, and then `.strip_margin()`, it's that simple!
+```rust
 assert_eq!(
-    r#"
-    |Hello,
-    |  world!
-    |"#
+    r#"Hello,
+      |  world!
+      |"#
     .strip_margin(),
-    "\nHello,\n  world!\n",
-);
-
-// Or you can use some other marker of your preference...
-assert_eq!(
-    r#"
-    *Hello,
-    *  world!
-    *"#
-    .strip_margin_with('*'),
-    "\nHello,\n  world!\n",
+    "Hello,\n  world!\n",
 );
 ```
