@@ -1,4 +1,4 @@
-//! A simple library that allows you to write multiline string in a more elegant way.
+//! A little Rust library that enables you to write multiline strings à la Scala.
 
 // https://github.com/scala/scala/blob/39148e4ec34a5c53443dd1b25ceec2308cd097fe/src/library/scala/collection/StringOps.scala#L739-L763
 pub trait StripMargin {
@@ -27,6 +27,8 @@ pub trait StripMargin {
     /// ```
     fn strip_margin_with(&self, margin_char: char) -> String;
 
+    /// Shorthand for `strip_margin_with('|')`.
+    ///
     /// For every line in this string, strip a leading prefix consisting of blanks or control characters,
     /// followed by `'|'` from the line.
     ///

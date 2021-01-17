@@ -2,7 +2,7 @@
 authors = ["rami3l <rami3l@outlook.com>"]
 edition = "2018"
 name = "stripmargin"
-version = "0.1.0"
+version = "0.1.1"
 
 description = "Simple but elegant multiline string in Rust à la Scala."
 homepage = "https://github.com/rami3l/stripmargin"
